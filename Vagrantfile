@@ -21,6 +21,7 @@ Vagrant.configure("2") do |config|
     end
     dockerserver.vm.network "private_network", ip: "192.168.56.61"
     dockerserver.vm.hostname = "server-2"
+    dockerserver.vm.provision :file, source: "AT20_QUESTIONNAIRE_SERVICEl", destination: "/home/vagrant/AT20_QUESTIONNAIRE_SERVICE"
     dockerserver.vm.provision :shell, inline: "docker compose -f /home/vagrant/AT20_QUESTIONNAIRE_SERVICE/docker-compose.yaml up -d"
   end
 end
