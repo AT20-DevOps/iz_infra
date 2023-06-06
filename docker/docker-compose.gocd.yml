@@ -19,11 +19,12 @@ services:
       - gocd_server
     environment:
       - GO_SERVER_URL=http://gocd_server:8153/go
-      - AGENT_AUTO_REGISTER_KEY=c2040eac-81fd-470f-97de-27a5994a17e8
+      - AGENT_AUTO_REGISTER_KEY=b41271c2-5626-46de-b434-9d2de211caa1
       - AGENT_AUTO_REGISTER_RESOURCES=ubuntu
       - AGENT_AUTO_REGISTER_HOSTNAME=gocd_agent_ubuntu
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    command: curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && apt-get install nodejs -y
 
   gocd_agent_docker:
     image: gocd/gocd-agent-docker-dind:v22.2.0
@@ -33,7 +34,7 @@ services:
       - gocd_server
     environment:
       - GO_SERVER_URL=http://gocd_server:8153/go
-      - AGENT_AUTO_REGISTER_KEY=c2040eac-81fd-470f-97de-27a5994a17e8
+      - AGENT_AUTO_REGISTER_KEY=b41271c2-5626-46de-b434-9d2de211caa1
       - AGENT_AUTO_REGISTER_RESOURCES=docker
       - AGENT_AUTO_REGISTER_HOSTNAME=gocd_agent_docker
     volumes:
@@ -47,7 +48,7 @@ services:
       - gocd_server
     environment:
       - GO_SERVER_URL=http://gocd_server:8153/go
-      - AGENT_AUTO_REGISTER_KEY=c2040eac-81fd-470f-97de-27a5994a17e8
+      - AGENT_AUTO_REGISTER_KEY=b41271c2-5626-46de-b434-9d2de211caa1
       - AGENT_AUTO_REGISTER_RESOURCES=python
       - AGENT_AUTO_REGISTER_HOSTNAME=gocd_agent_python
     volumes:
