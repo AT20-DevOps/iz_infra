@@ -6,4 +6,5 @@ terraform.tfstate
 terraform.tfstate.backup
 virtualbox.box
 .terraform.lock.hcl
+.terraform.tfstate.lock.info
 windows_amd64
