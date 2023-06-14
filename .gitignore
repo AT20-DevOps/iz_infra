@@ -2,3 +2,11 @@
 ubuntu-bionic-18.04-cloudimg-console.log
 AT20_QUESTIONNAIRE_SERVICE
 sonar-scanner-cli-4.7.0.2747-linux.zip
+terraform.tfstate
+terraform.tfstate.backup
+virtualbox.box
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+windows_amd64
+vagrant
+vagrant.pub
