@@ -8,3 +8,5 @@ virtualbox.box
 .terraform.lock.hcl
 .terraform.tfstate.lock.info
 windows_amd64
+vagrant
+vagrant.pub
